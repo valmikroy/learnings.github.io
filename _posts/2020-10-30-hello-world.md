@@ -9,9 +9,6 @@ redirect_from:
 ---
 Hello World! This is the beginning of this theme.
 
-![Hello_World](images/Hello_World.jpeg)
+![Hello_World](https://github.com/valmikroy/learnings.github.io/blob/master/_posts/images/Hello_World.jpeg?raw=true)
 
-And with the image
-
-![Hello_World twice](https://github.com/valmikroy/learnings.github.io/blob/master/_posts/images/Hello_World.jpeg?raw=true)
 
