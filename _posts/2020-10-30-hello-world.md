@@ -13,3 +13,5 @@ Hello World! This is the beginning of this theme.
 
 And with the image
 
+![Hello_World twice](images/Hello_World.jpeg)
+
