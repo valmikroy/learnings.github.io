@@ -9,7 +9,7 @@ redirect_from:
 ---
 Hello World! This is the beginning of this theme.
 
-![Hello_World](../images/Hello_World.jpeg)
+![Hello_World](images/Hello_World.jpeg)
 
 And with the image
 
