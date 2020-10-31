@@ -282,9 +282,3 @@ Here’s how it works
 
 
 
-## Sample
-Hello World! This is the beginning of this theme.
-
-![Hello_World](https://github.com/valmikroy/learnings.github.io/blob/master/_posts/images/Hello_World.jpeg?raw=true)
-
-
