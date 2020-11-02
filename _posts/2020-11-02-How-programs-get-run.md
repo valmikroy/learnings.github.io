@@ -156,7 +156,6 @@ Lets cover execution of the binary and the script with the wrapper  __do_execve_
    % ./do_execve ./wrapper6
    Failed to execute './wrapper6', Too many levels of symbolic links```
    
-   ```
 
 One key observation is that `arg[0]` still getting replaced just once and newer wrappers are getting pushed in the `args` stack between `arg[0]` and first script argument till 6th wrapper.
 
