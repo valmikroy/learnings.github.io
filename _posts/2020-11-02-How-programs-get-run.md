@@ -266,3 +266,75 @@ This above arrangement of variables later get addressed by a program
      0x7fff6c842e90: argc=3
 ```
 
+
+
+
+
+# Executable file
+
+This section will cover various aspects of executable file, how it comes to an existance and how its code get translated into machine specific instructions.
+
+- C program 
+
+  ```C
+  #include <stdio.h>
+  
+  int main(){
+      printf("this\n");
+      return 0;
+  }
+  ```
+
+- Converted into object code with `gcc -c -O0 test.c`  which can be disassembled with `objdump --disassemble-all test.o` which shows `main` section like following
+
+  ```assembly
+  Disassembly of section .text:
+  
+  0000000000000000 <main>:
+     0:   f3 0f 1e fa             endbr64
+     4:   55                      push   %rbp
+     5:   48 89 e5                mov    %rsp,%rbp
+     8:   48 8d 3d 00 00 00 00    lea    0x0(%rip),%rdi        # f <main+0xf>
+     f:   e8 00 00 00 00          callq  14 <main+0x14>
+    14:   b8 00 00 00 00          mov    $0x0,%eax
+    19:   5d                      pop    %rbp
+    1a:   c3                      retq
+  
+  ```
+
+- Object code need to be linked with other libraries to build an executable which can be done with `gcc -o test -O0  test.c`  and disassembly of the `main()` looks like following 
+
+  ```assembly
+  
+  0000000000001149 <main>:
+      1149:       f3 0f 1e fa             endbr64
+      114d:       55                      push   %rbp
+      114e:       48 89 e5                mov    %rsp,%rbp
+      1151:       48 8d 3d ac 0e 00 00    lea    0xeac(%rip),%rdi        # 2004 <_IO_stdin_used+0x4>
+      1158:       e8 f3 fe ff ff          callq  1050 <puts@plt>
+      115d:       b8 00 00 00 00          mov    $0x0,%eax
+      1162:       5d                      pop    %rbp
+      1163:       c3                      retq
+      1164:       66 2e 0f 1f 84 00 00    nopw   %cs:0x0(%rax,%rax,1)
+      116b:       00 00 00
+      116e:       66 90                   xchg   %ax,%ax
+      
+  ```
+- And  disassembly of the `main()`  during runtime looks like following in the gdb
+
+
+  ```assembly
+  (gdb) disas main
+  Dump of assembler code for function main:
+     0x0000000000001149 <+0>:     endbr64
+     0x000000000000114d <+4>:     push   %rbp
+     0x000000000000114e <+5>:     mov    %rsp,%rbp
+     0x0000000000001151 <+8>:     lea    0xeac(%rip),%rdi        # 0x2004
+     0x0000000000001158 <+15>:    callq  0x1050 <puts@plt>
+     0x000000000000115d <+20>:    mov    $0x0,%eax
+     0x0000000000001162 <+25>:    pop    %rbp
+     0x0000000000001163 <+26>:    retq
+  End of assembler dump.
+  ```
+
+ 
