@@ -7,8 +7,11 @@ tags: [linux, kernel]
 redirect_from:
   - /2020/11/01/
 ---
-Links to original articles, [first](https://lwn.net/Articles/630727/) and [second](https://lwn.net/Articles/631631/)
 
+
+# EXECVE() system call
+
+Links to original articles, [first](https://lwn.net/Articles/630727/) and [second](https://lwn.net/Articles/631631/)
 
 
 ### Setup
@@ -154,8 +157,11 @@ Lets cover execution of the binary and the script with the wrapper  __do_execve_
    
    # after 6th level of wrapper it fails with ELOOP error
    % ./do_execve ./wrapper6
-   Failed to execute './wrapper6', Too many levels of symbolic links```
+   Failed to execute './wrapper6', Too many levels of symbolic links
    
+   
+   ```
+  
 
 One key observation is that `arg[0]` still getting replaced just once and newer wrappers are getting pushed in the `args` stack between `arg[0]` and first script argument till 6th wrapper.
 
