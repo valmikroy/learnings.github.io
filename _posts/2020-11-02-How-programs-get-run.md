@@ -116,12 +116,14 @@ Lets cover execution of the binary and the script with the wrapper  __do_execve_
 - Executing wrapper with another wrapper
 
   - Simple Wrapper 
-   ```shell
-   # create a wrapper with following script
+   ```c
+   #create a wrapper with following script
+   
    % cat ./wrapper
    #!./show_info
    
-   # Execute above wrapper
+   #Execute above wrapper
+   
    % ./do_execve ./wrapper
    argv[0] = './show_info'
    argv[1] = './wrapper'
@@ -145,7 +147,7 @@ Lets cover execution of the binary and the script with the wrapper  __do_execve_
    ENVVAR2=2
    ```
   - Nesting of wrappers
-   ```shell
+   ```c
    argv[0]:  'zero'=>'./wrapper4'=>'./wrapper3'=>'./wrapper2'=>'./wrapper' =>'./show_info'
    argv[1]:  'one'   './wrapper5'  './wrapper4'  './wrapper3'  './wrapper2'  './wrapper'
    argv[2]:  'two'   'one'         './wrapper5'  './wrapper4'  './wrapper3'  './wrapper2'
@@ -155,7 +157,9 @@ Lets cover execution of the binary and the script with the wrapper  __do_execve_
    argv[6]:                                                    'two'         'one'
    argv[7]:                                                                  'two'
    
-   # after 6th level of wrapper it fails with ELOOP error
+  #after 6th level of wrapper it fails with ELOOP error
+   
+   
    % ./do_execve ./wrapper6
    Failed to execute './wrapper6', Too many levels of symbolic links
    
