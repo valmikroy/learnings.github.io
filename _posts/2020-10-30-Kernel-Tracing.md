@@ -278,6 +278,7 @@ Here’s how it works
 - [Profiling versus tracing](https://www.jwhitham.org/2016/02/profiling-versus-tracing.html) by Jack Whitham.
 - How [Kprobe works](https://lwn.net/Articles/132196/)? 
 - [Various examples](http://www.jauu.net/talks/data/runtime-analyse-of-linux-network-stack.pdf) from all probing tools
+- [eBPF customization examples](https://www.collabora.com/news-and-blog/blog/2019/04/15/an-ebpf-overview-part-2-machine-and-bytecode/)
 
 
 
