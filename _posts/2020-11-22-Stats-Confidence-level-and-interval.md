@@ -1,6 +1,28 @@
+---
+layout: post
+title: Raspberry Pi quick configuration 
+description: "Notes around home Raspberry Pi configurations"
+categories: [statistic]
+tags: [statisti, math]
+Comments: true
+
+---
+
+
+
+
+
+
+
 # Understanding Confidence level and Confidence interval
 
 `netperf` utility allows us to do linux network tcp connection benchmark. It allows you to measure state of connectivity using statistical method of **confidence internval and level**. Here are notes which first to understand those statistical terms refering to this [blog entry](https://sanjayjsw05.medium.com/confidence-interval-and-confidence-level-layman-explanation-572a20eaaf2d). 
+
+## Table of Contents
+
+* Kramdown table of contents
+{:toc .toc}
+
 
 
 
