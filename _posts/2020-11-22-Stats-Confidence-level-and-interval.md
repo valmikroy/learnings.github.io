@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Raspberry Pi quick configuration 
-description: "Notes around home Raspberry Pi configurations"
+title: Understanding Confidence level and Confidence interval
+description: "Understanding Confidence level and Confidence interval while using netperf"
 categories: [statistic]
 tags: [statisti, math]
 Comments: true
