@@ -74,13 +74,13 @@ $$
 $$
 But look at that number `2.714567` which is closer to Euler's number above. In nutshell, it can be represented as following
 $$
-\lim_{n\to\infty} (1+r/n)^n = e^r
+\lim_{n\to\infty} \left[1+\frac{r/100}n\right]^n = e^{r/100}
 $$
 So effective annual rate calcualtion can be done 
 $$
-Effective Annual Rate = e^{r/100} - 1 * 100  \\
+Effective Annual Rate = ( e^{r/100} - 1 ) * 100  \\
 \ \\
-r = annual\ rate
+r = annual\ rate\ in\ percentage
 $$
 
 
