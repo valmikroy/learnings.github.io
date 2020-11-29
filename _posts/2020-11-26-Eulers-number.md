@@ -60,11 +60,11 @@ Now it is way more than \$200 which I calculated initially with the simple inter
 
 Formula for compounding interest which we can use 
 $$
-Final Amount = Principal Amount * (1 + r/n)^n \\
-Effective Annual Rate = (1+r/n)^n - 1 \\
+Final Amount = Principal Amount * \left[1 + \frac{r/100}{n}\right]^n \\
+Effective Annual Rate = \left[1+\frac{r/100}{n}\right]^n - 1 \\
  \  \\
 \begin{align*} \\
-r = annual\ interest\ rate\ in\ decimals \\
+r = annual\ interest\ rate\ in\ percentage \\
 n = compounding\ internval \\
 \end{align*}
 $$
@@ -78,7 +78,7 @@ $$
 $$
 So effective annual rate calcualtion can be done 
 $$
-Effective Annual Rate = ( e^{r/100} - 1 ) * 100  \\
+Effective\ Annual\ Rate\ (\%) = ( e^{r/100} - 1 ) * 100  \\
 \ \\
 r = annual\ rate\ in\ percentage
 $$
