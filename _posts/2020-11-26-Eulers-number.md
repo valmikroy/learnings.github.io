@@ -89,7 +89,7 @@ $$
 
 
 
-### Poission Process 
+### Poisson Process 
 
 The Poisson process is one of the most widely-used counting processes. It is usually used in scenarios where we are counting the occurrences of certain events that appear to happen at a certain rate, but completely at random (without a certain structure).  
 
