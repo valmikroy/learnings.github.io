@@ -89,7 +89,54 @@ $$
 
 
 
+### Poission Process 
 
+The Poisson process is one of the most widely-used counting processes. It is usually used in scenarios where we are counting the occurrences of certain events that appear to happen at a certain rate, but completely at random (without a certain structure).  
+
+Above example of compounding is exponential growth function while Poission process has an exponential decay function like following which reaches to 1 along with increase in value of `t`.
+
+
+
+![Exponential_decay](images/2020-11-26-Eulers-number/Exponential_decay.jpg)
+
+
+
+This is similar to above function converts into 
+$$
+-\frac1{rate} log(rand(0..1))
+$$
+ 
+
+
+
+```ruby
+#!/usr/bin/env ruby
+#
+
+
+rate = 1000000
+e = 2.7182
+
+sum = 0
+
+rate.times do |a|
+
+ interval = Math.log(rand(),e)/rate * -1
+
+ # over here we can add a multiplication factor 
+ sum += interval
+
+end
+
+# this sum is always close to 1
+puts sum
+```
+
+
+
+#### Referece
+
+- [Basic Concepts of the Poisson Process](https://www.probabilitycourse.com/chapter11/11_1_2_basic_concepts_of_the_poisson_process.php)
 
 
 
